@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#153e32" />
+    <meta
+      name="description"
+      content="Understand Melbourne's public transport reliability. Explore routes, compare delays, and find a better time to travel."
+    />
+    <title>OnTrack — Melbourne transit reliability</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside>
+      <a class="brand" href="?view=overview"
+        ><span class="brandmark">↗</span> ontrack<span class="branddot"
+          >.</span
+        ></a
+      >
+      <div class="city">MELBOURNE, VICTORIA</div>
+      <nav aria-label="Main navigation">
+        <small>EXPLORE</small
+        ><button data-view="overview">◫ <span>Overview</span></button
+        ><button data-view="routes">⌁ <span>Route explorer</span></button
+        ><button data-view="compare">
+          ⇄ <span>Compare routes</span><span class="navtag">NEW</span></button
+        ><button data-view="stops">⌾ <span>Stop explorer</span></button
+        ><small>YOUR SPACE</small
+        ><button data-view="saved">
+          ☆ <span>Saved routes</span><span id="saved-count">0</span></button
+        ><small>ABOUT THE DATA</small
+        ><button data-view="method">ⓘ <span>How we measure</span></button
+        ><button data-view="health">
+          ▥ <span>System status</span><i class="statusdot"></i>
+        </button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-route"><span></span><span></span><span></span></div>
+        <strong>A little more certainty.<br />A better way to travel.</strong>
+        <p>Know your route before you go.</p>
+        <div class="version">
+          Independent. Open data. Melbourne.<br />v0.1 · Preview
+        </div>
+      </div>
+    </aside>
+    <div class="shell">
+      <header>
+        <div class="breadcrumb">
+          Workspace <span>/</span> <b id="crumb">Overview</b>
+        </div>
+        <div class="header-right">
+          <span class="demo-dot"></span> Demo workspace
+          <span class="avatar">KR</span>
+        </div>
+      </header>
+      <main id="main"></main>
+      <footer>
+        <span><b>ontrack.</b> A clearer picture of your commute.</span
+        ><span
+          >Data attribution: Victorian Department of Transport and Planning ·
+          <a href="https://creativecommons.org/licenses/by/4.0/"
+            >CC BY 4.0</a
+          ></span
+        >
+      </footer>
+    </div>
+    <div id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
